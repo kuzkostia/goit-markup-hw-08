@@ -10,7 +10,24 @@
 
 .footer-container {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  @media screen and(min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
+
+.footer-logo-address {
+  text-align: center;
+  margin-bottom: 60px;
+  @media screen and(min-width: 768px) {
+    margin-left: 70px;
+  }
+
+   @media screen and(min-width: 1200px) {
+    margin-left: 0;
+  }
 }
 
 .footer-address {
@@ -42,8 +59,16 @@
 }
 
 .footer-socials {
-  margin-left: 70px;
-  margin-right: 93px;
+  margin-bottom: 60px;
+  @media screen and(min-width: 768px) {
+    margin-left: 165px;
+  }
+
+  @media screen and(min-width: 1200px) {
+    margin-left: 70px;
+    margin-right: 93px;
+    margin-bottom: 0;
+  }
 }
 
 .footer-socials-title {
@@ -53,11 +78,14 @@
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .footer-socials-list {
   display: flex;
   gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-socials-link {
@@ -85,18 +113,40 @@
   fill: var(--white-color);
 }
 
+.footer-form {
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width: 1200px) {
+    margin-left: 0;
+  }
+}
+
 .form {
   display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
 }
 
 .footer-form .footer-input {
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 16px;
-  width: 358px;
+  width: 100%;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
+
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+  }
 
   background-color: var(--secondary-bg-color);
   &::placeholder {
@@ -112,18 +162,29 @@
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  text-align: center;
 
   color: var(--white-color);
-
   margin-bottom: 20px;
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
 
 .footer-form-button {
   display: flex;
+  width: 200px;
   justify-content: center;
   align-items: center;
-  margin-left: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
   padding: 10px 28px;
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 0;
+    margin-left: 12px;
+  }
 
   background-color: var(--accent);
   color: var(--white-color);
