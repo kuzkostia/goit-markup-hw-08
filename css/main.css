@@ -962,6 +962,7 @@ body {
 @media screen and (min-width: 1200px) {
   .footer-logo-address {
     margin-left: 0;
+    margin-bottom: 0;
   }
 }
 
