@@ -24,10 +24,6 @@ body {
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
-  @media screen and (min-width: 768px) {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
 
   @media screen and (min-width: 1200px) {
     padding-top: 94px;
@@ -36,11 +32,29 @@ body {
 }
 
 .section-title {
-  margin-bottom: 50px;
-  text-align: center;
 
-  color: var(--title-color);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  @media screen and (min-width: 480px) {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.18;
+    text-align: center;
+    color: var(--title-color);
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    text-align: center;
+
+    color: var(--title-color);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+  }
+}
+
+.work__section {
+  @media screen and (min-width: 768px) {
+    padding-bottom: 0px;
+  }
 }
