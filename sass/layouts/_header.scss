@@ -140,7 +140,7 @@
 .menu__link {
   position: relative;
   display: block;
-  &::after {
+  &.current::after {
     content: "";
 
     position: absolute;
@@ -153,11 +153,8 @@
     background-color: var(--accent);
     color: var(--accent);
 
-    transform: scaleX(0);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  &:hover::after {
     transform: scaleX(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
